@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.time.LocalDate;
 
 public class Principal {
-
+// Prueba
     static Scanner input = new Scanner (System.in);
 
     static Object capturaAsociado(){
