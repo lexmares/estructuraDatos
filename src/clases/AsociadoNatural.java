@@ -42,7 +42,7 @@ public class AsociadoNatural extends Asociado{
 
         @Override
         public String toString() {
-            return "AsociadoNatural{" + "montoTotalAportaciones=" + montoTotalAportaciones + ", cantAportaciones=" + cantAportaciones + ", ultimaAportacion=" + ultimaAportacion + '}';
+            return super.toString() + "AsociadoNatural{" + "montoTotalAportaciones=" + montoTotalAportaciones + ", cantAportaciones=" + cantAportaciones + ", ultimaAportacion=" + ultimaAportacion + '}';
         }
 
 

@@ -36,12 +36,14 @@ public class MyApp {
 
     static void listarDirectivos(){
         for(int i = 0; i < d; i++){
+            System.out.println("Los asociados directivos son:");
             System.out.println(directivos[i]);
         }
     }
 
     static void listarNaturales(){
         for(int i = 0; i < n; i++){
+            System.out.println("Los asociados naturales son:");
             System.out.println(naturales[i]);
         }
     }
@@ -59,12 +61,10 @@ public class MyApp {
     }
 
 
-    static void registrarPago(AsociadoNatural a, int pago){
+    static void registrarPago(AsociadoNatural a, double pago){
         a.setCantAportaciones(a.getCantAportaciones()+1);
         a.setMontoTotalAportaciones(a.getMontoTotalAportaciones()+pago);
         a.setUltimaAportacion(LocalDate.now());
     }
-
-
-
+    //myapp funcional
 }
