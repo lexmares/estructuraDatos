@@ -1,5 +1,7 @@
 package app;
 import clases.*;
+
+import javax.swing.*;
 import java.time.LocalDate;
 
 
@@ -35,26 +37,43 @@ public class MyApp {
     }
 
     static void listarDirectivos(){
-        for(int i = 0; i < d; i++){
-            System.out.println("Los asociados directivos son:");
-            System.out.println(directivos[i]);
+//        for(int i = 0; i < d; i++){
+//            System.out.println("Los asociados directivos son:");
+//            System.out.println(directivos[i]);
+//        }
+        JOptionPane.showMessageDialog(null, listaDeDirectivos());
+    }
+    static String listaDeDirectivos(){
+        String lista = "Los asociados directivos son:";
+        for(int i = 0; i < n; i++){
+            lista += "\n" + directivos[i];
         }
+        return lista;
     }
 
     static void listarNaturales(){
-        for(int i = 0; i < n; i++){
-            System.out.println("Los asociados naturales son:");
-            System.out.println(naturales[i]);
-        }
+//        System.out.println("Los asociados naturales son:");
+//        for(int i = 0; i < n; i++){
+//            System.out.println(naturales[i]);
+//        }
+        JOptionPane.showMessageDialog(null, listaDeNaturales());
     }
 
+    static String listaDeNaturales(){
+        String lista = "Los asociados naturales son:";
+        for(int i = 0; i < n; i++){
+            lista += "\n" + naturales[i];
+        }
+        return lista;
+    }
 
     static boolean verificarCargo(String cargoDirectivo){
         boolean c = true;
         for(int i = 0; i < d; i++){
             if(cargoDirectivo.equals(directivos[i].getCargo())){
                 c = false;
-                System.out.println("No es posible tener dos cargos del mismo tipo");
+                //System.out.println("No es posible tener dos cargos del mismo tipo");
+                JOptionPane.showMessageDialog(null, "No es posible tener dos cargos del mismo tipo");
             }
         }
         return c;

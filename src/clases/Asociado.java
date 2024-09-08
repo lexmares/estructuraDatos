@@ -53,7 +53,13 @@ import java.time.LocalDate;
         }
 
         @Override
+//        public String toString() {
+//            return "Asociados{" + "noSocio=" + noSocio + ", nombre=" + nombre + ", fechaIngreso=" + fechaIngreso + ", noTelefono=" + noTelefono + '}';
+//        }
         public String toString() {
-            return "Asociados{" + "noSocio=" + noSocio + ", nombre=" + nombre + ", fechaIngreso=" + fechaIngreso + ", noTelefono=" + noTelefono + '}';
+            return "[numero de Socio : " + noSocio + ", nombre : " + nombre + ", fecha de Ingreso : " + fechaIngreso + ", noTelefono : " + noTelefono + ']';
         }
+
+
+
     }
