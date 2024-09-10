@@ -30,12 +30,7 @@ public class AsociadoDirectivo extends Asociado{
     }
 
     @Override
-//    public String toString() {
-//        return super.toString() +"AsociadoDirectivo{" + "cargo=" + cargo + ", fechaPosesion=" + fechaPosesion + '}';
-//    }
     public String toString() {
         return super.toString() + "AsociadoDirectivo [" + "cargo : " + cargo + ", fechaPosesion : " + fechaPosesion + ']';
     }
-
-
 }

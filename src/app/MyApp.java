@@ -17,7 +17,6 @@ public class MyApp {
 
 
     static void agregarDirectivo(AsociadoDirectivo socioD) throws Exception{
-
         if(d  < directivos.length-1){
             directivos[d] = socioD;
             d++;
@@ -37,10 +36,6 @@ public class MyApp {
     }
 
     static void listarDirectivos(){
-//        for(int i = 0; i < d; i++){
-//            System.out.println("Los asociados directivos son:");
-//            System.out.println(directivos[i]);
-//        }
         JOptionPane.showMessageDialog(null, listaDeDirectivos());
     }
     static String listaDeDirectivos(){
@@ -52,10 +47,6 @@ public class MyApp {
     }
 
     static void listarNaturales(){
-//        System.out.println("Los asociados naturales son:");
-//        for(int i = 0; i < n; i++){
-//            System.out.println(naturales[i]);
-//        }
         JOptionPane.showMessageDialog(null, listaDeNaturales());
     }
 
@@ -72,7 +63,6 @@ public class MyApp {
         for(int i = 0; i < d; i++){
             if(cargoDirectivo.equals(directivos[i].getCargo())){
                 c = false;
-                //System.out.println("No es posible tener dos cargos del mismo tipo");
                 JOptionPane.showMessageDialog(null, "No es posible tener dos cargos del mismo tipo");
             }
         }
