@@ -13,19 +13,19 @@ public class Principal {
 
 
     static Object capturaAsociado() throws Exception {
-
+        String[] tipo = new String[]{"A.Natural", "A.Directivo" };
         Object o = new Object();
         int nosocio = Integer.parseInt(JOptionPane.showInputDialog("No. de asociado:"));
         String nombre = JOptionPane.showInputDialog("Nombre de asociado:");
         LocalDate ingreso = LocalDate.now();
         int tel = Integer.parseInt(JOptionPane.showInputDialog("No. de telefono"));
-        int tipo = Integer.parseInt(JOptionPane.showInputDialog("Tipo de asociado a registrar\n1.Natural\n2.Directivo"));
+        int tipoA = JOptionPane.showOptionDialog(null, "Opciones Disponibles", "Tipo de asociado2", 0, JOptionPane.QUESTION_MESSAGE, null, tipo, "");
 
-        gestionSocios(tipo, nosocio, nombre, ingreso, tel);
+        gestionSocios(tipoA, nosocio, nombre, ingreso, tel);
         return o;
         }
         static void gestionSocios(int tipo, int nosocio, String nombre, LocalDate ingreso, int tel) throws Exception{
-            if(tipo == 1){
+            if(tipo == 0){
                 AsociadoNatural a = new AsociadoNatural(nosocio, nombre, ingreso, tel, 0,0, null);
                 int pago = 2500;
                 MyApp.registrarPago(a, pago);
